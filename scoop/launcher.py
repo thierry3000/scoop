@@ -454,6 +454,8 @@ def main():
 
     # Get a list of resources to launch worker(s) on
     hosts = utils.getHosts(args.hostfile, args.hosts)
+    print("hosts:")
+    print(hosts)
     if args.n:
         n = args.n
     else:

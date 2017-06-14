@@ -197,7 +197,8 @@ def getHostsFromList(hostlist):
 def parseSLURM(string):
     """Return a host list from a SLURM string"""
     bunchedlist = re.findall('([^ /\t=\n\[,]+)(?=\[)(.*?)(?<=\])', string)
-
+    print("bunchedlist")
+    print(bunchedlist)
     hosts = []
 
     # parse out the name followd by range (ex. borgb[001-002,004-006]

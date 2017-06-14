@@ -42,4 +42,4 @@ def calcPi(workers, tries):
     return piValue
 
 if __name__ == "__main__":
-    dataPi = calcPi(3000, 5000)
+    dataPi = calcPi(3000, 50000)
