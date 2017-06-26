@@ -16,9 +16,9 @@ _PORT = 6376
 _ADDRESS_4 = '239.45.99.98'
 _ADDRESS_6 = 'ff08:0:0:6d69:6e75:7363:6f6e:6600'
 _ADDRESSES = [_ADDRESS_4]
-if socket.has_ipv6:
-    _ADDRESSES.append(_ADDRESS_6)
-_CHARSET = 'UTF-8'
+#if socket.has_ipv6:
+#    _ADDRESSES.append(_ADDRESS_6)
+#_CHARSET = 'UTF-8'
 VERSION='1.0'
 
 # Compatibility functions
@@ -555,11 +555,11 @@ def _resolve_addrs(straddrs, port, ignore_unavailable=False, protocols=[socket.A
 
 def _find_sock():
     """ Create a UDP socket """
-    if socket.has_ipv6:
-        try:
-            return socket.socket(socket.AF_INET6, socket.SOCK_DGRAM)
-        except socket.gaierror:
-            pass # Platform lied about IPv6 support
+#    if socket.has_ipv6:
+#        try:
+#            return socket.socket(socket.AF_INET6, socket.SOCK_DGRAM)
+#        except socket.gaierror:
+#            pass # Platform lied about IPv6 support
     return socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 def _main():
